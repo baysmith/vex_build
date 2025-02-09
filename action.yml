@@ -1,0 +1,15 @@
+name: 'vex build check'
+description: 'Build a VEXcode Pro V5 project'
+branding:
+  icon: 'box'  
+  color: 'green'
+inputs:
+  path:
+    description: 'Path to project'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Containerfile'
+  args:
+    - ${{ inputs.path }}
